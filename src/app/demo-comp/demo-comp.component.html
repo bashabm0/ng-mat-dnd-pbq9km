@@ -1,0 +1,12 @@
+<!-- Generate N dropdowns -->
+<!-- <select *ngFor="let item of [].constructor(ddn); let i = index">
+    <option *ngFor="let item of [].constructor(ddn); let i = index" value="i">Option {{i}}</option>
+</select> -->
+
+<div class="image-video">
+  <div class="inner-image-video">
+    <input #Image type="file" (change)="handleFileInput($event)" />
+    <img width="100%" *ngIf="imageUrl" [src]="imageUrl" class="image" />
+  </div>
+  <span>Image/Video</span>
+</div>

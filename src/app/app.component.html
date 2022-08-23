@@ -1,0 +1,32 @@
+<ng-container cdkDropListGroup>
+	<div class="example-container">
+		<h2>Sidebar</h2>
+
+		<div cdkDropList #sidebarList="cdkDropList" [cdkDropListData]="sidebar" cdkDropListConnectedTo="[mainList]"
+			class="example-list" (cdkDropListDropped)="drop($event)">
+			<div class="example-box" cdkDrag>
+				<app-demo-comp-2 [btn]=2></app-demo-comp-2>
+			</div>
+			<div class="example-box" cdkDrag>
+				<app-demo-comp [ddn]=2></app-demo-comp>
+			</div>
+			<div class="example-box" cdkDrag>
+				<app-demo-comp-3 [txt]=3></app-demo-comp-3>
+			</div>
+		</div> 
+	</div>
+
+	<div class="example-container">
+		<h2>Main</h2>
+
+		<div cdkDropList #mainList="cdkDropList" [cdkDropListData]="main" cdkDropListConnectedTo="[sidebarList]"
+			class="example-list" (cdkDropListDropped)="drop($event)">
+			<div class="example-box" cdkDrag>
+				<app-demo-comp [ddn]=1></app-demo-comp>
+			</div>
+			<div class="example-box" cdkDrag>
+				<app-demo-comp-2 [btn]=3></app-demo-comp-2>
+			</div>
+		</div>
+	</div> 
+</ng-container>  
